@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Szuhóczky Máté">
+    <meta name="description" content="Egy luxusétterem weboldala">
+    <title>World on a Plate</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css">
+    <link rel="icon" href="kepek/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1>World on a Plate</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Kezdőlap</a></li>
+            <li><a href="magyar.html" >Magyar ízek</a></li>
+            <li><a href="olasz.html">Olasz ízek</a></li>
+            <li><a href="francia.html" >Francia ízek</a></li>
+            <li><a href="kapcsolat.html">Kapcsolat/Asztalfoglalás</a></li>
+            <li><a href="ar_kaloriaszamito.html" class="active">Ár-Kalóriaszámító</a></li>
+        </ul>
+    </nav>
+    <form method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php">
+    <div class="container egesz_kapcsolat">
+        <div class="hatterresz">
+            <div class="leiras_kaloria"><h2>
+                Kalóriaszámláló</h2><p>Új szolgáltatásunkkal mostantól könnyedén kiszámolhatod, mennyi kalóriát fogsz elfogyasztani éttermünkben! Add meg az egyes ételekből kívánt mennyiséget, és rendszerünk azonnal megmutatja az összes kalóriát, így még tudatosabban élvezheted a gasztronómiai élményeket.</p></div>
+            <div class="felsorolt_etelek">
+                <p>Magyar ételek:</p>
+                <label for="hungarian_harmony">Hungarian Harmony(420kcal) (db): <input type="number" name="hungarian_harmony" id="hungarian_harmony" class="etel_szam" min="0" max="50"></label>
+                <label for="paprikas_csodavilag">Paprikás Csodavilág(520kcal) (db): <input type="number" name="paprikas_csodavilag" id="paprikas_csodavilag" class="etel_szam" min="0" max="50"></label>
+                <label for="gourmet_langos">Gourmet Lángos(650kcal) (db): <input type="number" name="gourmet_langos" id="gourmet_langos" class="etel_szam" min="0" max="50"></label>
+                <label for="edes_kurto">Édes Kürtő(390kcal) (db): <input type="number" name="edes_kurto" id="edes_kurto" class="etel_szam" min="0" max="50"></label>
+            </div>
+            <div class="felsorolt_etelek">
+                <p>Olasz ételek:</p>
+                <label for="lasagna_al_forno">Lasagne al Forno(600kcal) (db): <input type="number" name="lasagna_al_forno" id="lasagna_al_forno" class="etel_szam" min="0" max="50"></label>
+                <label for="spaghetti_frutti">Spaghetti ai Frutti di Mare(480kcal) (db): <input type="number" name="spaghetti_frutti" id="spaghetti_frutti" class="etel_szam" min="0" max="50"></label>
+                <label for="pizza_margherita">Pizza Margherita(720kcal) (db): <input type="number" name="pizza_margherita" id="pizza_margherita" class="etel_szam" min="0" max="50"></label>
+                <label for="tiramisu_classico">Tiramisu Classico(450kcal) (db): <input type="number" name="tiramisu_classico" id="tiramisu_classico" class="etel_szam" min="0" max="50"></label>
+            </div>
+            <div class="felsorolt_etelek">
+                <p>Francia ételek:</p>
+                <label for="hagymaleves">Tradicionális Francia Hagymaleves(320kcal) (db): <input type="number" name="hagymaleves" id="hagymaleves" class="etel_szam" min="0" max="50"></label>
+                <label for="provance_ratatouille">Provance-i Ratatouille(220kcal) (db): <input type="number" name="provance_ratatouille" id="provance_ratatouille" class="etel_szam" min="0" max="50"></label>
+                <label for="steak_tartare">Steak Tartare(350kcal) (db): <input type="number" name="steak_tartare" id="steak_tartare" class="etel_szam" min="0" max="50"></label>
+                <label for="parisian_macarons">Parisian Macarons(220kcal) (db): <input type="number" name="parisian_macarons" id="parisian_macarons" class="etel_szam" min="0" max="50"></label>
+            </div>
+            <p>Válaszd ki mit sportolsz:<label for="sport_valasztas">
+                <select name="sport_valasztas" id="sport_valasztas">
+                    <option value="futas">Futás</option>
+                    <option value="uszas">Úszás</option>
+                    <option value="biciklizes">Biciklizés</option>
+                    <option value="sulyzo">Súlyzós edzés</option>
+                    <option value="box">Boxolás</option>
+                </select>
+            </label></p>
+            <p><input type="button" value="Kiszámolás" id="mybutton" class="elkuldo_gomb"><input type="reset" value="Törlés" class="torlo_gomb"></p>
+            <p>Kalória:<input type="text" id="kaloria_eredmeny" value="0">Ár:<input type="text" id="ar_eredmeny" value="0"></p>
+            <p>Ennyi idő alatt égetheted el ezt a kalóriát a választott sporttal: <input type="text" id="ido_eredmeny"></p>
+        </div>
+    </div>
+    </form>
+    <footer>Az oldal kizárólag oktatási célokat szolgál. - Szuhóczky Máté 2024 Corvinus</footer>
+    <script src="js/kaloria.js"></script>
+</body>
+
+</html>

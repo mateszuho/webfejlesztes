@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Szuhóczky Máté">
+    <meta name="description" content="Egy luxusétterem weboldala">
+    <title>World on a Plate</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css">
+    <link rel="icon" href="kepek/favicon.ico" type="image/x-icon">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myform").validate({//http://www.sitepoint.com/basic-jquery-form-validation-tutorial/});
+                rules: {
+                    nev: "required",
+                    lastname: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    telefonszam: "required",
+                    datum_nap: "required",
+                    datum_ido: "required",
+                    vendegszam: "required",
+                },
+                messages: {
+                    nev: "Kérlek add meg a teljes neved!",
+                    email: " Kérlek valós email címet adj meg!",
+                    telefonszam: "Kérlek add meg a telefonszámod!",
+                    datum_nap: "Kérlek adj meg egy pontos dátumot!",
+                    datum_ido: "Kérlek adj meg egy pontos időpontot!",
+                    vendegszam: "Kérlek add meg a vendégek számát!",
+
+                },
+            });
+        });
+    </script>
+    <style>
+        label.error {
+            color: red;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>World on a Plate</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Kezdőlap</a></li>
+            <li><a href="magyar.html">Magyar ízek</a></li>
+            <li><a href="olasz.html">Olasz ízek</a></li>
+            <li><a href="francia.html">Francia ízek</a></li>
+            <li><a href="kapcsolat.html" class="active">Kapcsolat/Asztalfoglalás</a></li>
+            <li><a href="ar_kaloriaszamito.html">Ár-Kalóriaszámító</a></li>
+        </ul>
+    </nav>
+    <form method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" id="myform" novalidate>
+        <div class="egesz_kapcsolat">
+
+            <div class="kapcsolat">
+                <h1>Fontos információk</h1>
+                <p>Nyitvatartás:</p>
+                <ul>
+                    <li>Hétfő-Péntek: 12.00-22.00</li>
+                    <li>Szombat-Vasárnap: 11.00-23.00</li>
+                </ul>
+                
+                <p>Helyszín: Budapest, Váci utca 1</p>
+                <p>Telefonszám: +36 30 123 4567</p>
+                <p>Email: info@worldonaplate.hu</p>
+                <figure><img src="kepek/lokacio.png" alt="lokacio">
+                    <figcaption>Az étterem pontos lokációja</figcaption>
+                </figure>
+            </div>
+            <div class="kerdoiv">
+                <h1>Asztalfoglalás</h1>
+                <label for="nev">Teljes név:</label><input type="text" name="nev" id="nev"
+                    placeholder="pl.: Kovács János">
+                <label for="email">E-mail cím:</label><input type="email" name="email" id="email"
+                    placeholder="pl.: kovacsjanos@gmail.com">
+                <label for="telefonszam">Telefonszám:</label><input type="tel" id="telefonszam" name="telefonszam"
+                    placeholder="06-">
+                <label for="datum_nap">Asztalfoglalás időpontja:</label><label for="datum_ido"></label>
+                <div><input type="date" name="datum_nap" id="datum_nap" class="asztaldatum"><br><input type="time"
+                        name="datum_ido" class="asztaldatum" id="datum_ido"></div>
+                <label for="vendegszam">Vendégek száma:</label><input type="number" name="vendegszam" id="vendegszam"
+                    min="1" max="20" class="vendegszam">
+                <label for="preferalt_hely_belteri">Preferált ülőhely:</label><label for="preferalt_hely_kulteri"></label>
+                <div class="radio_szin"><input type="radio" name="preferalt_hely" id="preferalt_hely_belteri" value="belteri">
+                    Beltéri</div>
+                <div class="radio_szin"><input type="radio" name="preferalt_hely" id="preferalt_hely_kulteri" value="kulteri">
+                    Kültéri</div>
+                <p>Ha rendelkezik valamilyen allergiával, kérem jelölje be a megfelelőt:</p>
+                <div class="radio_szin">
+                    <label for="gluten"><input type="checkbox" name="gluten" id="gluten" class="checkbox_szin">Gluténérzékenység<br></label>
+                    <label for="laktozintolerancia"><input type="checkbox" name="laktozintolerancia"
+                            id="laktozintolerancia" class="checkbox_szin">Laktózintolerancia<br></label>
+                    <label for="mogyoroallergia"><input type="checkbox" name="mogyoroallergia"
+                            id="mogyoroallergia" class="checkbox_szin">Mogyoróallergia<br></label>
+                    <label for="egyeb"><input type="checkbox" name="egyeb" id="egyeb" class="checkbox_szin">Egyéb:<br></label>
+                </div>
+                <label for="specialis_keres">Ha bármilyen speciális kérése van, vagy az egyéb opcíót választotta az
+                    allergénok közül, kérjük írja le:</label><br><textarea placeholder="pl.: Születésnap"
+                    name="specialis_keres" id="specialis_keres" cols="35" rows="5"></textarea>
+                <p><input type="submit" class="elkuldo_gomb"><input type="reset" value="Törlés" class="torlo_gomb"></p>
+            </div>
+        </div>
+    </form>
+    <footer>Az oldal kizárólag oktatási célokat szolgál. - Szuhóczky Máté 2024 Corvinus</footer>
+</body>
+
+</html>
