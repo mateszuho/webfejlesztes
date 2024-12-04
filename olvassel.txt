@@ -11,3 +11,7 @@ Fontok:
 Lora google web fontot használtam az egész dokumentumra: https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&display=swap
 Cormorant Garamond google web fontot használtam a címekre: https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&display=swap
 
+A képek egy része a Pexel nevezetű oldalról van: https://www.pexels.com/hu-hu/. A másik része a Freepik nevű oldalról: https://www.freepik.com
+
+A szövegek egy részét én írtam, azonban egyes szövegeket segített a ChatGPT legenerálni.
+
