@@ -1,6 +1,6 @@
 Oldal készítője: Szuhóczky Máté
 
-Url cím: 
+Url cím: https://mateszuho.github.io/webfejlesztes/
 
 A weboldal egy luxusétterem honlapja. Ebben az étteremben különböző országok különlegességeit kóstolhatjuk meg.
 
